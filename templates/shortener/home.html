@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="box center">
+        
+        <h1 class="site_title">
+            <span>U</span>RL <span>SH</span>ORTEN<span>ER</span>
+        </h1>
+        <p class="btn-group">
+            {% if user.is_authenticated %}
+                <a href="{% url 'shorturl_list' %}" class="btn primaryAction">Shorten some URLs!</a>
+            {% else %}
+                <a href="{% url 'account_login' %}" class="btn primaryAction">Sign In</a> or <a href="{% url 'account_signup' %}" class="btn secondaryAction">Sign Up</a>
+            {% endif %}
+        </p>
+    </div>
+{% endblock content %}

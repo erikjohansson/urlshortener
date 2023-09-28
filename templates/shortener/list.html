@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head_title %}
+    My URLs
+{% endblock head_title %}
+{% block content %}
+    <h1>My Shortened URLs</h1>
+    <div class="box">
+        <form class="add-url-form" action="{% url 'shorturl_list' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <button type="submit" class="primaryAction">Save</button>
+            </div>
+        </form>
+        <h2>Saved URLs</h2>
+        <ul class="url-list">
+            {% for item in shorturls %}
+                <li>
+                    <a href="{{ item.get_absolute_url }}">{{ item.identifier }}</a>
+                    <p>{{ item.url }}</p>
+                    <form class="actions" method="post" action="{% url 'shorturl_delete' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="identifier" value="{{ item.identifier }}">
+                        <button class="delete">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
