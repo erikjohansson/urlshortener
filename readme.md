@@ -47,6 +47,7 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
 
 - Add docker setup for running in production
 - Add github actions for deployment
+- Add mailtrap for email sending/testing
 - Add more tests
 - Refactor URL saving logic to avoid duplicates
 - Refactor URL shortcode to ensure uniqueness (although collision is unlikely)
