@@ -37,3 +37,7 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
   ```bash
   python manage.py runserver
   ```
+
+- Visit the application at http://127.0.0.1:8000/
+- Create an account at http://127.0.0.1:8000/accounts/signup/
+- Login at http://127.0.0.1:8000/accounts/login/

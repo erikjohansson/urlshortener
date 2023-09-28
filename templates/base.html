@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block head_title %}
+        {{ title|default:"" }}
+      {% endblock head_title %}
+    | URL Shortener</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  </head>
+  <body>
+    {% block header %}
+      {% include "includes/header.html" %}
+    {% endblock header %}
+    <main class="container">
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </body>
+</html>
