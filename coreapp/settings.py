@@ -29,6 +29,8 @@ ALLOWED_HOSTS = ["*"]
 
 SITE_ID = 1
 
+APPEND_SLASH = True
+
 # ALL_AUTH SETTINGS:
 # ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 ACCOUNT_AUTHENTICATION_METHOD = "email"
@@ -44,6 +46,9 @@ AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+ACCOUNT_EMAIL_VERIFICATION = "none"
 
 # Application definition
 
