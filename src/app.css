@@ -1,0 +1,195 @@
+:root {
+  --max-content: 50rem;
+  --inset: 1rem;
+  --bg: #f8f0d6;
+  --fg: #001219;
+  --primary: #005f73;
+  --secondary: #0a9396;
+  --tertiary: #bb3e03;
+  --quaternary: #ee9b00;
+  --quinary: #9b2226;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --inset: 2rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: helvetica;
+}
+
+a {
+  color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.25rem;
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  color: white;
+}
+
+.site_title span {
+  color: var(--quaternary);
+}
+
+header .container {
+  display: flex;
+  gap: var(--inset);
+}
+main.container {
+  padding-block: var(--inset);
+}
+main > * + * {
+  margin-top: 1.5rem;
+}
+
+.container {
+  width: min(100% - var(--inset), var(--max-content));
+  margin: 0 auto;
+  padding: calc(var(--inset) / 2);
+}
+
+.box {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: calc(1 * var(--inset));
+  margin-block: var(--inset);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.center {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.center > * + * {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: var(--inset);
+}
+
+.btn-group .btn {
+  display: inline-block;
+}
+
+form {
+  margin-block: var(--inset);
+}
+
+form > * + * {
+  margin-top: 1.5rem;
+}
+form ul {
+  margin-left: 1.5rem;
+  color: var(--quinary);
+}
+label {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--tertiary);
+  border-radius: 0.25rem;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  padding: 1rem 1.5rem;
+  border: solid 1px currentColor;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  font-size: inherit;
+}
+
+.secondaryAction {
+  background-color: var(--quaternary);
+  border-color: var(--quaternary);
+  color: white;
+}
+
+.primaryAction {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.url-list {
+  list-style: none;
+}
+
+.url-list li {
+  display: flex;
+  gap: var(--inset);
+  padding: 1.5rem 0;
+}
+.url-list li + li {
+  border-top: 1px solid var(--tertiary);
+}
+
+.url-list .actions {
+  flex-grow: 0;
+  padding: 0;
+  margin: 0 0 0 auto;
+  background: none;
+}
+
+.url-list .delete {
+  display: block;
+  padding: 0.5rem;
+  margin: 0;
+  border: 0;
+  color: var(--quinary);
+  background-color: transparent;
+  box-shadow: none;
+}

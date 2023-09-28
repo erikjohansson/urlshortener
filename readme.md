@@ -41,3 +41,12 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
 - Visit the application at http://127.0.0.1:8000/
 - Create an account at http://127.0.0.1:8000/accounts/signup/
 - Login at http://127.0.0.1:8000/accounts/login/
+- Add some Short URLs at http://127.0.0.1:8000/accounts/profile/
+
+## Todo
+
+- Add docker setup for running in production
+- Add github actions for deployment
+- Add more tests
+- Refactor URL saving logic to avoid duplicates
+- Refactor URL shortcode to ensure uniqueness (although collision is unlikely)
