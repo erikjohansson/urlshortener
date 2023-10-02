@@ -17,9 +17,11 @@
                    value="{{ redirect_field_value }}" />
         {% endif %}
         {% csrf_token %}
+        {% comment %}
         <p>
             <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
         </p>
+        {% endcomment %}
         <div>
             <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
         </div>
