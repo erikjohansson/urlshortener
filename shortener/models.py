@@ -15,6 +15,7 @@ class Shorturl(models.Model):
     class Meta:
         verbose_name = _("shorturl")
         verbose_name_plural = _("shorturls")
+        ordering = ["-created"]
 
     def __str__(self):
         return self.url
