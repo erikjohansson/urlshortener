@@ -12,6 +12,17 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
 
 ## How to use
 
+### Github codespaces
+
+- Open repository in Github codespaces
+- Run the database migrations
+
+  ```bash
+  python manage.py migrate
+  ```
+
+### or...
+
 - Create a python virtual environment and install dependencies
 
   ```bash
