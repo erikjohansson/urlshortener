@@ -6,6 +6,10 @@ A simple URL Shortener application written in Python using the Django framework.
 
 Django is an open-source web framework that is fast, secure, and stable, with a large community behind it.
 
+## Try it
+
+https://shorten.apps.wip.gdn
+
 ## Requirements
 
 - Python 3.8 or higher
@@ -37,7 +41,7 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
   python manage.py migrate
   ```
 
-- Create a superuser
+- Create a superuser (Optional, for Django admin)
 
   ```bash
   python manage.py createsuperuser
@@ -56,7 +60,6 @@ Django is an open-source web framework that is fast, secure, and stable, with a 
 
 ## Todo
 
-- Add docker setup for running in production
 - Add github actions for deployment
 - Add mailtrap for email sending/testing
 - Add more tests
