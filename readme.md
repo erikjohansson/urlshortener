@@ -60,7 +60,6 @@ https://shorten.apps.wip.gdn
 
 ## Todo
 
-- Add github actions for deployment
 - Add mailtrap for email sending/testing
 - Add more tests
 - Refactor URL saving logic to avoid duplicates
